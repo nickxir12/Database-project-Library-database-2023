@@ -55,19 +55,24 @@ Applications that run without `sudo` privileges often are not allowed to connect
 For more details read [this](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql).
 
 ## Install Steps
-Clone the repository: Go to GitHub repository and click on the "Code" button. Select "Download ZIP" to download the repository as a ZIP file.
+1.Clone the Repository: Start by cloning the GitHub repository containing the DDL and DML scripts to the user's local machine. This can be done using the git clone command followed by the repository's URL.
 
-1.Extract the ZIP file: Once the ZIP file is downloaded, extract its contents to a folder on your computer. This folder will contain all the necessary files for your web page.
 
-2.Move files: Open the extracted folder and locate your PHP, CSS, and JS files. Move these files to the appropriate directory in your XAMPP installation. Typically, you would move them to the "htdocs" folder within the XAMPP installation directory.
+2.Install XAMPP: Ensure that XAMPP is installed on the user's computer. XAMPP provides the necessary web server and database services to run the application. Follow the installation instructions specific to the user's operating system.
 
-3.Start XAMPP: Launch the XAMPP control panel and start the Apache server. This will allow your web page to run locally on your computer.
+3.Start XAMPP: Launch XAMPP and start the Apache web server and MySQL database server. This can usually be done through the XAMPP control panel.
 
-4.Access localhost: Open a web browser and type "localhost" in the address bar. This will take you to the XAMPP default page, indicating that the server is running correctly.
+4.Import the Database: Access the MySQL database management tool (phpMyAdmin) through the XAMPP control panel or by navigating to http://localhost/phpmyadmin in a web browser. Create a new database and import the DDL script to set up the necessary database structure.
 
-5.Access your web page: To view your web page, open a web browser and enter "localhost" followed by the path to your PHP file. For example, if your PHP file is named "index.php" and located in the "mywebpage" folder within "htdocs", you would enter "localhost/mywebpage/index.php" in the address bar.
+a. Create Database: Click on "New" to create a new database and provide a suitable name.
 
-That's it! Your web page should now be accessible through your XAMPP localhost environment.
+b. Import DDL Script: Select the newly created database and navigate to the "Import" tab. Choose the DDL script file from your local machine and click on "Go" to execute the script and create the required tables.
+
+5.Import DML Script : Follow a similar process to import the DML script and populate the tables with sample data.
+
+6.Configure Application: Depending on your application's configuration, you may need to update the database connection settings in your PHP files. Open the relevant PHP files and modify the database host, username, password, and database name to match the user's local setup.
+
+7.Start the Application: Place the PHP, CSS, JS, and other necessary files in the appropriate directory within the XAMPP htdocs folder (usually located at C:\xampp\htdocs\). Access the application by opening a web browser and entering the URL http://localhost/your-application-folder.
 
 
 ## Usage
