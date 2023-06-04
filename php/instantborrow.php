@@ -14,16 +14,22 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $userQuery = $_GET['userQuery'];
 
         // Perform the database query to search users by username
-        $userSql = "SELECT * FROM user
+        $userSql = "SELECT *
+                    FROM user
                     WHERE username LIKE '%$userQuery%'
                     AND (
-                      (number_of_borrowed_books < 2 AND user_type = 'student')
-                      OR
-                      (number_of_borrowed_books < 1 AND user_type = 'teacher')
-                      OR
-                      (number_of_borrowed_books < 2 AND user_type = 'school_lib_operator')
+                        (number_of_borrowed_books < 2 AND user_type = 'student')
+                        OR
+                        (number_of_borrowed_books < 1 AND user_type = 'teacher')
+                        OR
+                        (number_of_borrowed_books < 2 AND user_type = 'school_lib_operator')
                     )
-                    AND user_id NOT IN (SELECT user_id_FK FROM borrowbook WHERE late > 0)";
+                    AND user_id NOT IN (
+                        SELECT user_id_FK
+                        FROM borrowbook
+                        WHERE late > 0
+                    )
+                    AND school_name_FK = '{$user_data['school_name_FK']}'";
 
 
         $userResult = $con->query($userSql);
@@ -74,7 +80,8 @@ if (isset($_POST['deleteButton'])) {
 <html>
 <head>
     <title>Search Users and Books</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <style type="text/css">
         body {
             font-family: Arial, sans-serif;

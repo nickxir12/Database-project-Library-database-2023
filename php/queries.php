@@ -11,8 +11,8 @@
 <html>
 <head>
     <title>Admin queries</title>
-	<script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
 	<style>
         .message-box {
@@ -155,10 +155,14 @@
   		<h2>Question 3.1.4</h2>
 
   	  <?php
-	  $sql = "SELECT a.author FROM BorrowBook bb
-					LEFT JOIN HasAuthor ha ON ha.ISBN_FK = bb.ISBN_FK
-					RIGHT JOIN Author a ON a.author_id = ha.author_id_FK
-					WHERE ha.author_id_FK IS NULL;";
+	  $sql = "SELECT author FROM Author
+				  WHERE author_id IN (
+				    SELECT author_id_FK FROM HasAuthor
+				    WHERE ISBN_FK NOT IN (
+				      SELECT DISTINCT ISBN_FK
+				      FROM BorrowBook
+				    )
+				  );";
 
   	  $result = $con->query($sql);
 
@@ -206,7 +210,7 @@
 				  ORDER BY popularity DESC
 				  LIMIT 3
 				)
-				SELECT top.ISBN_FK, c1.category, c2.category, top.popularity
+				SELECT top.ISBN_FK, c1.category as c1 , c2.category as c2, top.popularity
 				FROM top3 top
 				JOIN category c1 ON c1.ISBN_FK = top.ISBN_FK
 				JOIN category c2 ON c2.ISBN_FK = top.ISBN_FK

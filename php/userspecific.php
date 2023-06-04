@@ -63,13 +63,13 @@ if (isset($_GET['userId'])) {
 <html>
 <head>
     <title>User Details</title>
-    <script src="listshowing.js"></script>
+    <script src="../js/listshowing.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 
     <style>
         /* Your CSS styles here */
         body {
-  background-image: url('background-image1.jpg');
+  background-image: url('../image/background-image1.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;

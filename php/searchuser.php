@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Library User Home Page</title>
-  <script src="listshowing.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="../js/listshowing.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
   <style type="text/css">
     body {

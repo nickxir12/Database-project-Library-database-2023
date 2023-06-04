@@ -19,6 +19,7 @@ if ($resultCategories && mysqli_num_rows($resultCategories) > 0) {
         $categories[] = $row['category'];
     }
 }
+
 $querytitles = "SELECT distinct title FROM books order by title";
 $resulttitles = mysqli_query($con, $querytitles);
 $titles = array();
@@ -90,8 +91,8 @@ $result = mysqli_query($con, $sql);
 <html>
 <head>
     <title>Library User Home Page</title>
-    <script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <style type="text/css">
 
@@ -230,6 +231,7 @@ $result = mysqli_query($con, $sql);
 <?php else : ?>
     <input class="button" id="button" type="button" value="Back to home" onclick="redirectToHome()" style="position: absolute; top: 10px; right: 0; margin: 10px;"><br><br>
 <?php endif ?>
+
 <div class="container">
     <div class="title-frame">
         <h1>Search by Title, Author, and Category</h1>

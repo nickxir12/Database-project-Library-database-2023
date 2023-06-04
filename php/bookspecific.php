@@ -100,19 +100,13 @@ if (isset($_GET['isbn'])) {
 <html>
   <head>
     <title>Book Details</title>
-    <script src="listshowing.js"></script>
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
         /* Your CSS styles here */
-        body {
-          background-image: url('background-image1.jpg');
-          background-repeat: no-repeat;
-          background-size: 100%;
-          background-attachment: fixed;
-          padding-top: 80px;
-        }
+
 
 
         .container {
@@ -377,7 +371,7 @@ if (isset($_GET['isbn'])) {
                             <div class="message">
                                 Late borrow.
                             </div>
-                        <?php elseif ($user_data['user_type'] == 'teacher'): ?>
+                        <?php elseif ($user_data['user_type'] == 'teacher' || $user_data['user_type'] == 'school_lib_operator'): ?>
                             <div class="message">
                                 1 reservation already.
                             </div>

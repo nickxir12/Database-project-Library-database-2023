@@ -32,8 +32,9 @@
 	</style>
 
 	<style type="text/css">
+	
 	body {
-	background-image: url('background-image1.jpg');
+	background-image: url('../image/background-image1.jpg');
 	background-repeat: no-repeat;
 	/* background-position: center; */
 	background-size: 100%;
@@ -88,7 +89,7 @@
 
 	    <form method="post">
 	        <div style="font-size: 20px;margin: 10px;color: white;">Login</div>
- 
+
 	        <input id="text" type="text" name="username" placeholder="Enter your username"><br><br>
 	        <input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
 	        <input id="button" type="submit"  style="margin-left:90px;" name="form1_submit" value="Login"><br><br>

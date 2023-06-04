@@ -34,7 +34,8 @@
 <head>
     <title>Admin actions</title>
 	<script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
 	<input class="button" id="button" type="button" value="Back to queries menu" onclick="redirecttoQueries()" style="position: absolute; top: 10px; right: 0; margin: 10px;"><br><br>
@@ -56,12 +57,7 @@
     </style>
 
     <style type="text/css">
-        body {
-            background-image: url('background-image1.jpg');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            padding-top: 80px;
-        }
+
 
         #text {
             height: 25px;

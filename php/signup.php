@@ -11,7 +11,8 @@ include("functions.php");
 <html>
 <head>
     <title>Signup</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
     <style>
