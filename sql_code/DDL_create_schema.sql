@@ -1,6 +1,4 @@
-use project;
-
----------------------------------------------------------TABLES-------------------------------------------------------------------
+/*--------------------------------------------------------TABLES------------------------------------------------------------------*/
 create table School (
   school_name varchar(100) NOT NULL,
   school_address varchar(100) NOT NULL,
@@ -119,14 +117,12 @@ create table BorrowBook (
   CONSTRAINT valid_borrowing check (return_date >= borrow_date)
 )ENGINE=InnoDB;
 
----------------------------------------------------------INDEXES-------------------------------------------------------------------
--- indexes on Primary Keys are already created by sql
-CREATE INDEX idx_user_type ON User (user_type);                                           /*ofet needed*/
-CREATE INDEX idx_user_school ON User (school_name_FK);                                    /*often needed, also a foreign key*/
-CREATE INDEX idx_user_name ON User (first_name, last_name);                               /*often needed, especially on website*/
-CREATE INDEX idx_user_school ON Books (title);                                            /*often neede*/
-CREATE INDEX idx_author ON Author (author);                                               /*ofetn needed, especially in requested queries*/
-CREATE INDEX idx_status ON ReserveBook (reservation_status);                              /*often needed in trigger upadates/checks*/
+CREATE INDEX idx_user_type ON User (user_type);                  /*ofet needed*/
+CREATE INDEX idx_user_school ON User (school_name_FK);           /*often needed, also a foreign key*/
+CREATE INDEX idx_user_name ON User (first_name, last_name);      /*often needed, especially on website*/
+CREATE INDEX idx_user_school ON Books (title);                   /*often neede*/
+CREATE INDEX idx_author ON Author (author);                      /*ofetn needed, especially in requested queries*/
+CREATE INDEX idx_status ON ReserveBook (reservation_status);     /*often needed in trigger upadates/checks*/
 
 /*frequently used attributes, like ISBN_FK (in any table) or user_id_FK (in any table) or borrow_date
 are also part of composite primary keys, so MySQL/InnoDB Engine automatically creates indices for them,

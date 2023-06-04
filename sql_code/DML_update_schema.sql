@@ -1,9 +1,9 @@
 SET GLOBAL event_scheduler = ON;
 
----------------------------------------------------------TRIGGERS-------------------------------------------------------------------
+/*--------------------------------------------------------TRIGGERS------------------------------------------------------------------*/
 DELIMITER //
 
--- after a copy of a book gets borrowed, available_copies should decrease by 1
+/*after a copy of a book gets borrowed, available_copies should decrease by 1*/
 CREATE TRIGGER `upd_copies_on_borrow`
 AFTER INSERT ON `BorrowBook`
 FOR EACH ROW
@@ -16,7 +16,7 @@ THEN
 END IF;
 END //
 
--- after a copy of a book is returned, available_copies should increase by 1
+/* after a copy of a book is returned, available_copies should increase by 1*/
 CREATE TRIGGER `upd_copies_on_return`
 AFTER UPDATE ON `BorrowBook`
 FOR EACH ROW
@@ -33,7 +33,7 @@ THEN
 END IF;
 END //
 
---after school_lib_operator accepts a reservation the book should be added to borrowed books
+/*after school_lib_operator accepts a reservation the book should be added to borrowed books*/
 CREATE TRIGGER `upd_borrow`
 AFTER UPDATE ON `ReserveBook`
 FOR EACH ROW
@@ -45,7 +45,7 @@ THEN
 END IF;
 END //
 
---after a reservation for a book is made by a user, number_of_reserved_books should increase by 1
+/*after a reservation for a book is made by a user, number_of_reserved_books should increase by 1*/
 CREATE TRIGGER `upd_reserve_num`
 AFTER INSERT ON `ReserveBook`
 FOR EACH ROW
@@ -58,7 +58,7 @@ THEN
 END IF;
 END //
 
---after a reservation is accepted for a user --> a borrowing is made, number_of_borrowed_books should increase by 1
+/*after a reservation is accepted for a user --> a borrowing is made, number_of_borrowed_books should increase by 1*/
 CREATE TRIGGER `upd_borrow_num`
 AFTER INSERT ON `BorrowBook`
 FOR EACH ROW
@@ -72,7 +72,7 @@ THEN
 END IF;
 END //
 
---after cancellation of a reservation is made by a user, number_of_reserved_books should decrease by 1, allowing another reservation
+/*after cancellation of a reservation is made by a user, number_of_reserved_books should decrease by 1, allowing another reservation*/
 CREATE TRIGGER `upd_reserve_num_on_cancellation`
 AFTER UPDATE ON `ReserveBook`
 FOR EACH ROW
@@ -85,7 +85,7 @@ THEN
 END IF;
 END //
 
---when a user is added, check if age is valid for this user type
+/*when a user is added, check if age is valid for this user type*/
 CREATE TRIGGER `check_age`
 BEFORE INSERT ON `User`
 FOR EACH ROW
@@ -98,7 +98,7 @@ BEGIN
   END IF;
 END //
 
---set status = made for the oldest reservation made for a returned book
+/*set status = made for the oldest reservation made for a returned book*/
 CREATE TRIGGER `upd_status_on_positive_copies`
 AFTER UPDATE ON `HasBook`
 FOR EACH ROW
@@ -118,26 +118,26 @@ END //
 
 DELIMITER ;
 
----------------------------------------------------------EVENTS-------------------------------------------------------------------
+/*--------------------------------------------------------EVENTS------------------------------------------------------------------*/
 DELIMITER //
 
 CREATE EVENT `check_late_reservations`
 ON SCHEDULE
-EVERY 1 MINUTE
+EVERY 6 HOUR
 STARTS CURRENT_TIMESTAMP
 DO
 BEGIN
-  -- cancel reservations that have been waiting/made for a week
+  /*cancel reservations that have been waiting/made for a week*/
   UPDATE ReserveBook
   SET reservation_status = 'cancelled'
   WHERE CAST(DATE_ADD(reservation_date, INTERVAL 6 DAY) AS DATE) < CAST(NOW() AS DATE) AND (reservation_status = 'waiting' OR reservation_status = 'made');
 
-  -- set late = 1 if 7 days have passed from the latest unretrurned borrowing
+  /*set late = 1 if 7 days have passed from the latest unretrurned borrowing*/
   UPDATE BorrowBook
   SET late = 1
   WHERE return_date IS NULL AND DATE_ADD(borrow_date, INTERVAL 6 DAY) < CAST(NOW() AS DATE);
 
-  -- set number of reserved books = 0 when 7 days have passed from the 2nd latest reservation
+  /*set number of reserved books = 0 when 7 days have passed from the 2nd latest reservation*/
   UPDATE User
   SET number_of_reserved_books = 0
   WHERE user_id IN (SELECT user_id_FK FROM ReserveBook WHERE

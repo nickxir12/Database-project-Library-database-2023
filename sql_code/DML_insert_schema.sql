@@ -1,4 +1,4 @@
--- INSERT SCHOOLS
+/*INSERT SCHOOLS*/
 INSERT INTO School (school_name, school_address, city, school_phone_number, school_email, school_principal)
 VALUES ('Senior Highschool of Amfissa', 'Leof. Kon/nou Karamanli 1', 'Amfissa 331 00', '2265028475', 'amfissaschool@gmail.com', 'Epaminontas Geoergiou');
 
@@ -11,7 +11,7 @@ VALUES ('GEORGIOU ZOIS EDUCATIONAL High School', 'Averof 12-14', 'Argiroupoli 16
 INSERT INTO School (school_name, school_address, city, school_phone_number, school_email, school_principal)
 VALUES ('8th Junior-Senior Highschool of Chalandri', '28is Oktovriou & Agias Foteinis', 'Chalandri 152 38', '2106006614', 'chalandrischool@gmail.com', 'Konstantinos Kolliaros');
 
--- INSERT USERS
+/*INSERT USERS*/
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('62-810-5499', 'GEORGIOU ZOIS EDUCATIONAL High School', 'John', 'Deer', 'pmyford0', 'NK3DBYUPeg', 'school_lib_operator', true, 0, 0, 0, '1970-07-29', 1);
 
@@ -65,7 +65,7 @@ VALUES ('06-589-4622', 'Senior Highschool of Amfissa', 'Cassandra', 'Zanneli', '
 
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('42-400-7994', 'Senior Highschool of Amfissa', 'Joshua', 'Huckerby', 'jhuckerbyh', 'bdYyO9', 'student', true, 0, 0, 0, '2008-08-12', 1);
---
+
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('60-184-0005', 'GEORGIOU ZOIS EDUCATIONAL High School', 'John', 'Doe', 'ymogfordi', 'Gp6wGErFb', 'student', true, 0, 0, 0, '2011-12-12', 1);
 
@@ -95,7 +95,7 @@ VALUES ('98-051-5956', 'Senior Highschool of Amfissa', 'Mark', 'Lysaght', 'mlysa
 
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('50-757-8865', 'Senior Highschool of Amfissa', 'Kate', 'Checchetelli', 'kchecchetellir', 'sKw8BBR', 'teacher', true, 0, 0, 0, '1989-07-07', 1);
---
+
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('20-739-5216', '8th Junior-Senior Highschool of Chalandri', 'Margaret', 'Metheringham', 'mmetheringhams', 'IZe1uwf0Iz', 'teacher', true, 0, 0, 0, '1959-08-03', 1);
 
@@ -128,7 +128,7 @@ VALUES ('49-356-6693', '2nd Senior Highschool of Igoumenitsa', 'Nathan', 'Borton
 
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('36-585-3468', '2nd Senior Highschool of Igoumenitsa', 'Jack', 'Seabrooke', 'jseabrooke12', 'LftGsNpGwu2y', 'student', true, 0, 0, 0, '2008-03-29', 1);
---
+
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('80-811-5247', '8th Junior-Senior Highschool of Chalandri', 'Aaron', 'Anstead', 'aanstead13', 'L4Gsk9DhWH9P', 'student', true, 0, 0, 0, '2011-05-28', 1);
 
@@ -165,10 +165,10 @@ VALUES ('64-208-6128', 'Senior Highschool of Amfissa', 'Freya', 'Cozens', 'fcoze
 INSERT INTO User (user_id, school_name_FK, first_name, last_name, username, password, user_type, accepted_user, number_of_reserved_books, number_of_borrowed_books, total_num_of_borrowed_books, birth_date, active_user)
 VALUES ('00-000-0000', '8th Junior-Senior Highschool of Chalandri', 'Elias', 'Kallioras', 'elias', 'k', 'student', true, 0, 0, 0, '2005-04-03', 1);
 
--- INSERT ADMIN
+/*INSERT ADMIN*/
 INSERT INTO Admin (admin_username, admin_password) VALUES ('admin', 'GFUjsd32');
 
--- INSERT BOOKS
+/*INSERT BOOKS*/
 INSERT INTO Books (ISBN, title, publisher, page_number, summary, cover, language)
 VALUES ('978-0-446-55620-9', 'To Kill a Mockingbird', 'Harper Perennial Modern Classics', 336, 'To Kill a Mockingbird is a novel by Harper Lee. It was published in 1960 and has since become a classic of modern American literature.', 'https://www.lybrary.com/images/the_book_without_a_name.jpg', 'English');
 
@@ -496,7 +496,7 @@ VALUES ('978-0-321-98203-0', 'Principles of Economics', 'Pearson', 816, 'Princip
 INSERT INTO Books (ISBN, title, publisher, page_number, summary, cover, language)
 VALUES ('978-0-12-803550-3', 'Introduction to Geographic Information Systems', 'Elsevier', 416, 'Introduction to Geographic Information Systems provides an overview of GIS technology and its applications, covering topics such as spatial data analysis, cartography, and remote sensing.', 'https://www.lybrary.com/images/the_book_without_a_name.jpg', 'English');
 
--- INSERT HAS BOOK
+/*INSERT HAS BOOK*/
 INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-307-58958-2', 'Senior Highschool of Amfissa', 8);
 INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-345-49678-6', '2nd Senior Highschool of Igoumenitsa', 9);
 INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-553-21312-3', 'GEORGIOU ZOIS EDUCATIONAL High School', 3);
@@ -628,7 +628,7 @@ INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-4
 INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-7167-6034-4', 'Senior Highschool of Amfissa', 10);
 INSERT INTO HasBook (ISBN_FK, school_name_FK, available_copies) VALUES ('978-0-393-96115-7', '2nd Senior Highschool of Igoumenitsa', 5);
 
--- INSERT CATEGORY
+/*INSERT CATEGORY*/
 INSERT INTO Category (category, ISBN_FK) VALUES ('Dystopian Fiction', '978-0-307-58958-2');
 INSERT INTO Category (category, ISBN_FK) VALUES ('Fantasy', '978-0-345-49678-6');
 INSERT INTO Category (category, ISBN_FK) VALUES ('Historical Fiction', '978-0-553-21312-3');
@@ -785,7 +785,7 @@ INSERT INTO Category (category, ISBN_FK) VALUES ('Fantasy', '978-0-07-340371-3')
 INSERT INTO Category (category, ISBN_FK) VALUES ('Fantasy', '978-0-385-52737-7');
 INSERT INTO Category (category, ISBN_FK) VALUES ('Fantasy', '978-0-679-72315-7');
 
--- INSERT KEYWORD
+/*INSERT KEYWORD*/
 INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Dystopia', '978-0-307-58958-2');
 INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Totalitarianism', '978-0-345-49678-6');
 INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Surveillance', '978-0-553-21312-3');
@@ -942,7 +942,7 @@ INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Mystery', '978-0-07-340371-3');
 INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Drama', '978-0-385-52737-7');
 INSERT INTO keyword (keyword, ISBN_FK) VALUES ('Fiction', '978-0-679-72315-7');
 
--- INSERT AUTHOR
+/*INSERT AUTHOR*/
 INSERT INTO Author (author) VALUES ('Antonin Edelmann');
 INSERT INTO Author (author) VALUES ('Meridith Ausello');
 INSERT INTO Author (author) VALUES ('Jessica Aronson');
@@ -979,7 +979,7 @@ INSERT INTO Author (author) VALUES ('Aggie Domerc');
 INSERT INTO Author (author) VALUES ('Lind Spridgen');
 INSERT INTO Author (author) VALUES ('Danice Durrell');
 
--- INSERT HAS AUTHOR
+/*INSERT HAS AUTHOR*/
 INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (1, '978-0-307-58958-2');
 INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (4, '978-0-345-49678-6');
 INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (13, '978-0-553-21312-3');
@@ -1131,8 +1131,8 @@ INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (8, '978-1-4292-3222-0');
 INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (9, '978-0-12-813802-6');
 INSERT INTO HasAuthor (author_id_FK, ISBN_FK) VALUES (10, '978-0-19-850410-3');
 
--- INSERT BORROW BOOK
--- 8th Junior-Senior Highschool of Chalandri
+/*INSERT BORROW BOOK*/
+/*8th Junior-Senior Highschool of Chalandri*/
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('14-803-9953', '978-0-321-98203-0', '2023-01-12', '2023-01-18', '2023-01-19', 0);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '14-803-9953';
@@ -1217,7 +1217,7 @@ INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date,
 VALUES ('22-522-1653', '978-0-07-340371-3', '2023-05-15', '2023-05-24', '2023-05-22', 1);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '22-522-1653';
 
--- GEORGIOU ZOIS EDUCATIONAL High School
+/*GEORGIOU ZOIS EDUCATIONAL High School*/
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('11-528-4906', '978-0-07-352419-1', '2023-01-24', '2023-01-30', '2023-01-31', 0);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '11-528-4906';
@@ -1303,7 +1303,7 @@ VALUES ('14-566-5720', '978-0-452-01141-5', '2023-04-10', '2023-04-17', '2023-04
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '25-107-9977';
 
 
--- 2nd Senior Highschool of Igoumenitsa
+/*2nd Senior Highschool of Igoumenitsa*/
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('00-833-5189', '978-0-06-057749-4', '2023-01-21', '2023-01-27', '2023-01-28', 0);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '00-833-5189';
@@ -1343,7 +1343,7 @@ UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WH
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('69-093-4272', '978-0-307-27884-8', '2023-02-27', '2023-03-07', '2023-03-07', 0);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '77-585-7810';
---late borrows
+
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('78-244-3530', '978-0-07-352258-6', '2023-05-19', NULL, '2023-05-26', 1);
 
@@ -1354,7 +1354,7 @@ INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date,
 VALUES ('03-217-2689', '978-0-786-72682-1', '2023-05-15', NULL, '2023-05-22', 1);
 
 
--- Senior Highschool of Amfissa
+/*Senior Highschool of Amfiss*/
 INSERT INTO BorrowBook (user_id_FK, ISBN_FK, borrow_date, return_date, due_date, late)
 VALUES ('50-757-8865', '978-0-321-92831-3', '2023-03-27', '2023-04-03', '2023-04-03', 0);
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '50-757-8865';
@@ -1384,8 +1384,8 @@ VALUES ('47-462-8756', '978-0-385-52737-7', '2023-02-09', '2023-02-16', '2023-02
 UPDATE User SET total_num_of_borrowed_books = total_num_of_borrowed_books + 1 WHERE user_id = '47-462-8756';
 
 
--- INSERT RESERVE BOOK
--- 8th Junior-Senior Highschool of Chalandri
+/*INSERT RESERVE BOOK*/
+/*8th Junior-Senior Highschool of Chalandri*/
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('00-000-0000', '978-0-06-089154-1', '2023-05-23 12:30:52', 'made');
 
@@ -1486,7 +1486,7 @@ INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_stat
 VALUES ('22-522-1653', '978-0-07-340371-3', '2023-05-15 21:19:12', 'accepted');
 
 
--- GEORGIOU ZOIS EDUCATIONAL High School
+/*GEORGIOU ZOIS EDUCATIONAL High School*/
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('93-561-7324', '978-0-19-882151-2', '2023-05-29 21:43:23', 'made');
 
@@ -1563,7 +1563,7 @@ INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_stat
 VALUES ('14-566-5720', '978-0-452-01141-5', '2023-04-10 13:125:12', 'accepted');
 
 
--- 2nd Senior Highschool of Igoumenitsa
+/*2nd Senior Highschool of Igoumenitsa*/
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('69-093-4272', '978-0-12-803550-3', '2023-05-29 13:57:13', 'made');
 
@@ -1608,7 +1608,7 @@ VALUES ('77-585-7810', '978-0-345-39680-1', '2023-03-03 12:38:06', 'accepted');
 
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('69-093-4272', '978-0-307-27884-8', '2023-02-27 13:34:03', 'accepted');
---late borrows
+
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('78-244-3530', '978-0-07-352258-6', '2023-05-19 19:46:40', 'accepted');
 
@@ -1619,7 +1619,7 @@ INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_stat
 VALUES ('03-217-2689', '978-0-786-72682-1', '2023-05-15 09:14:49', 'accepted');
 
 
--- Senior Highschool of Amfissa
+/*Senior Highschool of Amfissa*/
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('05-215-3486', '978-0-321-92831-3', '2023-05-29 18:42:55', 'made');
 
@@ -1650,8 +1650,8 @@ VALUES ('47-462-8756', '978-0-312-38047-3', '2023-02-22 11:54:49', 'accepted');
 INSERT INTO ReserveBook (user_id_FK, ISBN_FK, reservation_date, reservation_status)
 VALUES ('47-462-8756', '978-0-385-52737-7', '2023-02-09 11:39:05', 'accepted');
 
--- INSERT RATE BOOK
--- 8th Junior-Senior Highschool of Chalandri
+/*INSERT RATE BOOK*/
+/*8th Junior-Senior Highschool of Chalandri*/
 INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, critique, accepted_critique)
 VALUES ('14-803-9953', '978-0-321-98203-0', '3', 'good book, bad translation', 1);
 
@@ -1689,7 +1689,7 @@ INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, critique, accepted_cri
 VALUES ('87-268-5701', '978-1-4391-5864-9', '5', 'very interesting plot', 1);
 
 
--- GEORGIOU ZOIS EDUCATIONAL High School
+/*GEORGIOU ZOIS EDUCATIONAL High School*/
 INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, accepted_critique)
 VALUES ('25-107-9977', '978-0-345-49678-6', '5', 1);
 
@@ -1724,7 +1724,7 @@ INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, accepted_critique)
 VALUES ('91-232-4414', '978-0-07-802316-9', '4', 1);
 
 
--- 2nd Senior Highschool of Igoumenitsa
+/*2nd Senior Highschool of Igoumenitsa*/
 INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, accepted_critique)
 VALUES ('82-897-8319', '978-0-06-057749-4', '4', 1);
 
@@ -1756,7 +1756,7 @@ INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, accepted_critique)
 VALUES ('69-093-4272', '978-0-307-27884-8', '2', 1);
 
 
--- Senior Highschool of Amfissa
+/*Senior Highschool of Amfissa*/
 INSERT INTO RateBook (user_id_FK, ISBN_FK, Likert_rating, accepted_critique)
 VALUES ('50-757-8865', '978-0-451-52634-2', '5', 1);
 
