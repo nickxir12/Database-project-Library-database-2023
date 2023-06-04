@@ -9,6 +9,7 @@ Database project simulating a school library app and connecting it with a databa
 ## ER Diagram
 ![image](https://github.com/nickxir12/Database-project-Library-database-2023/blob/main/Diagrams/ER.png)
 
+
 ## Relational
 ![image](https://github.com/nickxir12/Database-project-Library-database-2023/blob/main/Diagrams/Relational.jpg)
 
