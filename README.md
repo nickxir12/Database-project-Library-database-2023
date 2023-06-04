@@ -69,7 +69,7 @@ a. Create Database: Click on "New" to create a new database and provide a suitab
 
 b. Import DDL Script: Select the newly created database and navigate to the "Import" tab. Choose the DDL script file from your local machine and click on "Go" to execute the script and create the required tables.
 
-5.Import DML Script : Follow a similar process to import the DML script and populate the tables with sample data.
+5.Import both DML Scripts(Update and Insert) : Follow a similar process to import the DML script and populate the tables with sample data.
 
 6.Configure Application: Depending on your application's configuration, you may need to update the database connection settings in your PHP files. Open the relevant PHP files and modify the database host, username, password, and database name to match the user's local setup.
 
