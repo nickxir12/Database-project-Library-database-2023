@@ -7,10 +7,10 @@ Database project simulating a school library app and connecting it with a databa
 - Nikolas Xiros    03120107 
 
 ## ER Diagram
-![image](https://user-images.githubusercontent.com/62110837/172057838-ed871f63-ae29-498f-ab79-301cb39398a3.png)
+![image](https://github.com/nickxir12/Database-project-Library-database-2023/blob/main/Diagrams/ER.png)
 
 ## Relational
-![image](https://user-images.githubusercontent.com/61976410/172052725-99211133-2059-4af2-8b0c-930bece7b258.png)
+![image](https://github.com/nickxir12/Database-project-Library-database-2023/blob/main/Diagrams/Relational.jpg)
 
 
 ## Dependencies
