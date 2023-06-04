@@ -54,12 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <body>
 
     <style type="text/css">
-    body {
-        background-image: url('background-image1.jpg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        padding-top: 80px;
-    }
 
     #text {
         height: 25px;

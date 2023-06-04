@@ -22,14 +22,14 @@ if ($resultusers && mysqli_num_rows($resultusers) > 0) {
 $sql1 = "SELECT u.first_name, u.last_name, DATEDIFF(NOW(), bb.due_date) AS late_days
             FROM BorrowBook bb
             JOIN (
-                SELECT first_name, last_name, user_id
+                SELECT first_name, last_name, user_id, school_name_FK
                 FROM User
-                WHERE first_name LIKE '%$query1%' AND last_name LIKE '%$query2%'
+                WHERE first_name LIKE '%$query1%' AND last_name LIKE '%$query2%' AND school_name_FK='{$user_data['school_name_FK']}'
             ) AS u ON bb.user_id_FK = u.user_id
             WHERE bb.return_date IS NULL
               AND bb.late = '1'
-              AND DATEDIFF(NOW(), bb.due_date) >= '$query3';
-            ";
+              AND DATEDIFF(NOW(), bb.due_date) >= '$query3'";
+
 
 $result1 = mysqli_query($con, $sql1);
 

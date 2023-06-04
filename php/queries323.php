@@ -28,12 +28,14 @@ if ($resultCategories && mysqli_num_rows($resultCategories) > 0) {
 
 
     $sql1 = "WITH ratings AS (
-                    SELECT rb.user_id_FK, rb.ISBN_FK, rb.Likert_rating AS average_rating
-                    FROM RateBook rb
-                    JOIN (SELECT DISTINCT user_id_FK FROM BorrowBook) bb ON rb.user_id_FK = bb.user_id_FK
-                    JOIN category c ON rb.ISBN_FK = c.ISBN_FK
-                    WHERE rb.user_id_FK LIKE '%$query1%'
-                      AND c.category LIKE '%$query2%'
+                  SELECT rb.user_id_FK, rb.ISBN_FK, rb.Likert_rating AS average_rating
+                  FROM RateBook rb
+                  JOIN (SELECT DISTINCT user_id_FK FROM BorrowBook) bb ON rb.user_id_FK = bb.user_id_FK
+                  JOIN (SELECT DISTINCT school_name_FK, user_id FROM User) u ON rb.user_id_FK = u.user_id
+                  JOIN category c ON rb.ISBN_FK = c.ISBN_FK
+                  WHERE u.school_name_FK = '$user_data[school_name_FK]'
+                  AND rb.user_id_FK LIKE '%$query1%'
+                  AND c.category LIKE '%$query2%'
                 )
                 SELECT AVG(r.average_rating) AS average_rating
                 FROM ratings r;

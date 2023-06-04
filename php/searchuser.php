@@ -78,7 +78,7 @@
 
     <div class="container">
       <div class="title-frame">
-        <h1>Search by name</h1>
+        <h1>Search by username</h1>
       </div>
       <div class="search-bar">
         <form method="GET">

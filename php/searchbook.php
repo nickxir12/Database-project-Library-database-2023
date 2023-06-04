@@ -68,9 +68,9 @@ if (!empty($query4)) {
     $sql .= " AND hb.available_copies = '$query4'";
 }
 
-if ($user_data['user_type'] == 'school_lib_operator') {
+
     $sql .= " AND hb.school_name_FK = '$user_data[school_name_FK]'";
-}
+
 
 if (!empty($order)) {
     switch ($order) {

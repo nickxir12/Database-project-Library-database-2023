@@ -155,14 +155,10 @@
   		<h2>Question 3.1.4</h2>
 
   	  <?php
-	  $sql = "SELECT author FROM Author
-				  WHERE author_id IN (
-				    SELECT author_id_FK FROM HasAuthor
-				    WHERE ISBN_FK NOT IN (
-				      SELECT DISTINCT ISBN_FK
-				      FROM BorrowBook
-				    )
-				  );";
+	  $sql = "SELECT a.author, a.author_id FROM BorrowBook bb
+	  		LEFT JOIN HasAuthor ha ON ha.ISBN_FK = bb.ISBN_FK
+	  		RIGHT JOIN Author a ON a.author_id = ha.author_id_FK
+	  		WHERE ha.author_id_FK IS NULL;";
 
   	  $result = $con->query($sql);
 
@@ -178,7 +174,7 @@
   		}
   		echo '</table>';
   	  } else {
-  		echo 'No users found.';
+  		echo 'No authors found.';
   	  }
   	  ?>
   	</div>
