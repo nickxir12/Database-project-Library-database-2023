@@ -65,7 +65,7 @@ For more details read [this](https://www.digitalocean.com/community/tutorials/ho
 
 4.Import the Database: Access the MySQL database management tool (phpMyAdmin) through the XAMPP control panel or by navigating to http://localhost/phpmyadmin in a web browser. Create a new database and import the DDL script to set up the necessary database structure.
 
-a. Create Database: Click on "New" to create a new database and provide a suitable name.
+a. Create Database: Click on "New" to create a new database and provide a suitable name(if possible suggested name 'project').
 
 b. Import DDL Script: Select the newly created database and navigate to the "Import" tab. Choose the DDL script file from your local machine and click on "Go" to execute the script and create the required tables.
 
