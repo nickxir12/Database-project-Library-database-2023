@@ -73,7 +73,7 @@ b. Import DDL Script: Select the newly created database and navigate to the "Imp
 
 6.Configure Application: Depending on your application's configuration, you may need to update the database connection settings in your PHP files. Open the relevant PHP files and modify the database host, username, password, and database name to match the user's local setup.
 
-7.Start the Application: Place the PHP, CSS, JS, and other necessary files in the appropriate directory within the XAMPP htdocs folder (usually located at C:\xampp\htdocs\). Access the application by opening a web browser and entering the URL http://localhost/your-folder_name/folder/php/login.php.
+7.Start the Application: Place the PHP, CSS, JS, and other necessary files in the appropriate directory within the XAMPP htdocs folder (usually located at C:\xampp\htdocs\). Access the application by opening a web browser and entering the URL http://localhost/your-folder_name/php/login.php.
 
 
 ## Usage
