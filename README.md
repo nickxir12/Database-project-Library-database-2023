@@ -65,15 +65,15 @@ For more details read [this](https://www.digitalocean.com/community/tutorials/ho
 
 4.Import the Database: Access the MySQL database management tool (phpMyAdmin) through the XAMPP control panel or by navigating to http://localhost/phpmyadmin in a web browser. Create a new database and import the DDL script to set up the necessary database structure.
 
-a. Create Database: Click on "New" to create a new database and provide a suitable name.
+a. Create Database: Click on "New" to create a new database and provide a suitable name(if possible suggested name 'project').
 
 b. Import DDL Script: Select the newly created database and navigate to the "Import" tab. Choose the DDL script file from your local machine and click on "Go" to execute the script and create the required tables.
 
-5.Import DML Script : Follow a similar process to import the DML script and populate the tables with sample data.
+5.Import both DML Scripts(Update and Insert) : Follow a similar process to import the DML script and populate the tables with sample data.
 
 6.Configure Application: Depending on your application's configuration, you may need to update the database connection settings in your PHP files. Open the relevant PHP files and modify the database host, username, password, and database name to match the user's local setup.
 
-7.Start the Application: Place the PHP, CSS, JS, and other necessary files in the appropriate directory within the XAMPP htdocs folder (usually located at C:\xampp\htdocs\). Access the application by opening a web browser and entering the URL http://localhost/your-application-folder.
+7.Start the Application: Place the PHP, CSS, JS, and other necessary files in the appropriate directory within the XAMPP htdocs folder (usually located at C:\xampp\htdocs\). Access the application by opening a web browser and entering the URL http://localhost/your-folder_name/php/login.php.
 
 
 ## Usage
