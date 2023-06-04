@@ -55,7 +55,7 @@ Applications that run without `sudo` privileges often are not allowed to connect
 For more details read [this](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql).
 
 ## Install Steps
-Clone the repository: Go to your GitHub repository and click on the "Code" button. Select "Download ZIP" to download the repository as a ZIP file.
+Clone the repository: Go to GitHub repository and click on the "Code" button. Select "Download ZIP" to download the repository as a ZIP file.
 
 1.Extract the ZIP file: Once the ZIP file is downloaded, extract its contents to a folder on your computer. This folder will contain all the necessary files for your web page.
 
