@@ -22,7 +22,7 @@ The aim of this project was to prioritize the functionality and database connect
 
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/61976410/172053255-3ae5b0bc-fcf1-47c3-a19e-8e99536d3d08.png)
+![image](screenshoots/Screenshot OperatorHome.png)
 ![image](https://user-images.githubusercontent.com/61976410/172053312-3486b596-458b-406d-aa4b-0eb087c155fa.png)
 ![image](https://user-images.githubusercontent.com/61976410/172053694-205dcafc-39dc-4d2a-bda9-5c56d839c79d.png)
 ![image](https://user-images.githubusercontent.com/61976410/172053343-ff14cd0c-c94b-4a88-8650-04afe31e78dd.png)
