@@ -54,6 +54,22 @@ Applications that run without `sudo` privileges often are not allowed to connect
 
 For more details read [this](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql).
 
+## Install Steps
+Clone the repository: Go to your GitHub repository and click on the "Code" button. Select "Download ZIP" to download the repository as a ZIP file.
+
+1.Extract the ZIP file: Once the ZIP file is downloaded, extract its contents to a folder on your computer. This folder will contain all the necessary files for your web page.
+
+2.Move files: Open the extracted folder and locate your PHP, CSS, and JS files. Move these files to the appropriate directory in your XAMPP installation. Typically, you would move them to the "htdocs" folder within the XAMPP installation directory.
+
+3.Start XAMPP: Launch the XAMPP control panel and start the Apache server. This will allow your web page to run locally on your computer.
+
+4.Access localhost: Open a web browser and type "localhost" in the address bar. This will take you to the XAMPP default page, indicating that the server is running correctly.
+
+5.Access your web page: To view your web page, open a web browser and enter "localhost" followed by the path to your PHP file. For example, if your PHP file is named "index.php" and located in the "mywebpage" folder within "htdocs", you would enter "localhost/mywebpage/index.php" in the address bar.
+
+That's it! Your web page should now be accessible through your XAMPP localhost environment.
+
+
 ## Usage
 The school library system showcases the functionality of an interface that allows users to sign up and log in to the application. The main emphasis during development was placed on establishing a reliable connection with the database, ensuring seamless integration between the system and the database.
 
