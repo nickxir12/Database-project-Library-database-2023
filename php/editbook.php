@@ -155,7 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Edit Book</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <style>
         .user-form {

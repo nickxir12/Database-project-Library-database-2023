@@ -53,16 +53,12 @@
 <html>
 <head>
 	<title>Login</title>
+	<script src="../js/listshowing.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
 	<style type="text/css">
-	body {
-	background-image: url('background-image1.jpg');
-	background-repeat: no-repeat;
-	/* background-position: center; */
-	background-size: 100%;
-	padding-top: 80px;
-	}
+
 
 	#text{
 

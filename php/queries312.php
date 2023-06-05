@@ -15,29 +15,29 @@ if ($resultCategories && mysqli_num_rows($resultCategories) > 0) {
     }
 }
 
-$sql1 = "SELECT u.first_name, u.last_name
-    FROM User u
-    JOIN BorrowBook bb ON u.user_id = bb.user_id_FK
-    WHERE u.user_type = 'teacher'
-    AND DATE_ADD(bb.borrow_date, INTERVAL 1 YEAR) >= NOW()
-    AND bb.ISBN_FK IN (
-        SELECT ISBN_FK
-        FROM category
-        WHERE category = '$query1'
-    );";
+$sql1 = "SELECT u.first_name,u.last_name
+                FROM User u
+                JOIN BorrowBook bb
+                ON u.user_id = bb.user_id_FK
+                WHERE u.user_type = 'teacher'
+                AND DATE_ADD(bb.borrow_date, INTERVAL 1 YEAR) >= NOW()
+                AND bb.ISBN_FK IN (
+                  SELECT ISBN_FK
+                  FROM category
+                  WHERE category = '$query1'
+                );";
 
 $result1 = mysqli_query($con, $sql1);
 
 $sql2 = "SELECT author FROM Author
-    WHERE author_id IN (
-        SELECT author_id_FK
-        FROM HasAuthor
-        WHERE ISBN_FK IN (
-            SELECT ISBN_FK
-            FROM category
-            WHERE category = '$query1'
-        )
-    );";
+            WHERE author_id IN (
+              SELECT author_id_FK FROM HasAuthor
+              WHERE ISBN_FK IN (
+                SELECT ISBN_FK
+                FROM category
+                WHERE category = '$query1'
+              )
+            );";
 
 $result2 = mysqli_query($con, $sql2);
 ?>
@@ -47,8 +47,8 @@ $result2 = mysqli_query($con, $sql2);
 <html>
 <head>
     <title>Library User Home Page</title>
-    <script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <style type="text/css">
 

@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Library User Home Page</title>
-  <script src="listshowing.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="../js/listshowing.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
   <style type="text/css">
     body {
@@ -78,7 +78,7 @@
 
     <div class="container">
       <div class="title-frame">
-        <h1>Search by name</h1>
+        <h1>Search by username</h1>
       </div>
       <div class="search-bar">
         <form method="GET">

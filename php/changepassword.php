@@ -58,7 +58,8 @@
 <html>
 <head>
 	<title>Change Password</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
 	<style type="text/css">

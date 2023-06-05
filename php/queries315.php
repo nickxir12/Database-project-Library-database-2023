@@ -17,10 +17,11 @@ $sql1 = "WITH valid AS (
               GROUP BY u.school_name_FK
               HAVING COUNT(*) >= 20
             )
-            SELECT op.first_name, op.last_name, v.borrow_count
+            SELECT op.first_name, op.last_name, v1.borrow_count
             FROM User op
-            INNER JOIN valid v
-            ON op.school_name_FK = v.school_name_FK
+            INNER JOIN valid v1 ON op.school_name_FK = v1.school_name_FK
+            INNER JOIN valid v2 ON v1.borrow_count = v2.borrow_count
+            AND v1.school_name_FK <> v2.school_name_FK
             AND op.user_type = 'school_lib_operator';";
 
 $result1 = mysqli_query($con, $sql1);
@@ -33,8 +34,8 @@ $result1 = mysqli_query($con, $sql1);
 <html>
 <head>
     <title>Library User Home Page</title>
-    <script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <style type="text/css">
 

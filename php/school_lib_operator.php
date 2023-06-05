@@ -32,8 +32,8 @@ if (isset($_POST['returnButton'])) {
 <html>
 <head>
     <title>Library School Operator Home Page</title>
-    <script src="listshowing.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="../js/listshowing.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <style>
         #userList,#BorrowsList,#resList,#reviewList,#LateBorrowsList,#aresList {
